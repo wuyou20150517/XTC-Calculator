@@ -53,6 +53,9 @@ Based on [**XTCADBCode-Web**](https://github.com/OnesoftQwQ/XTCADBCode-Web) by *
 
 ## Copyright & License / 版权与许可
 
+This project is for technical research only. It is not affiliated with XTC (Xiao Tian Cai). Do not use it for any unauthorized or illegal purposes.  
+本项目仅用于技术研究，与小天才官方无关，请勿用于违规用途
+
 Copyright © 2026 wuyou. All rights reserved.
 
 MIT License © 2026 wuyou
