@@ -1,4 +1,6 @@
 /*
+ * v1.1.0
+ * 
  * Copyright (c) 2026 wuyou. All rights reserved.
  * 
  * Implementation based on GitHub project: XTCADBCode-Web
@@ -139,7 +141,6 @@ int main(){
     c("90","根据GitHub项目 XTCADBCode-Web 实现\n");
     c("33","------------------------------------\n输入校验码 > ");
     cin>>input;
-    c("33","------------------------------------\n");
     int len=input.size();
     if(len==10){
         output1=v1(input,1);
@@ -148,16 +149,25 @@ int main(){
         output1=v2(input,1);
         output2=v2(input,2);
     }else{
+        c("33","--------------输入错误--------------\n");
         c("31","错误：设备可能使用v3校验码，暂不支持");
         c("33","\n--------------谢谢使用--------------\n\n");
         c("90","   Most functions: Hy3\n   main() & flash(): wuyou\n   GitHub: XTCADBCode-Web\n   Copyright©️ 2026 wuyou.\n   All rights reserved.\n\n");
         return 0;
     }
+    c("33","------------------------------------\n");
     c("33","计算中：");
     for(int a=0;a<28;a++){
         c("33","#");
         fflush(stdout);
         usleep(20000);
+    }
+    if(output1==""||output2==""){
+        c("33","\n--------------计算失败--------------\n");
+        c("31","计算时错误：校验码格式有误\n");
+        c("33","--------------谢谢使用--------------\n\n");
+        c("90","   Most functions: Hy3\n   main() & flash(): wuyou\n   GitHub: XTCADBCode-Web\n   Copyright©️ 2026 wuyou.\n   All rights reserved.\n\n");
+        return 0;
     }
     int now=1,lr;
     while(1){
